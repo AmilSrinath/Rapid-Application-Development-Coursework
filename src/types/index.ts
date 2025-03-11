@@ -25,7 +25,7 @@ export enum CoffeeType {
 }
 
 export interface CoffeeProduct {
-  id: string;
+  _id: string;
   displayName: string;
   type: CoffeeType;
   price: number;

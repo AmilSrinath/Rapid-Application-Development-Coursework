@@ -8,5 +8,5 @@ export function getAllCoffee(): CoffeeProduct[] {
 export function getCoffeeById(id: string): CoffeeProduct {
   const coffees = getAllCoffee();
 
-  return coffees?.filter((c) => c.id === id)[0];
+  return coffees?.filter((c) => c._id === id)[0];
 }

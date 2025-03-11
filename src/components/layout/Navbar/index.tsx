@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   UserIcon,
-  ListBulletIcon,
   ShoppingCartIcon,
 } from '@heroicons/react/24/outline';
 import { useShoppingCart } from '@/hooks/useShoppingCart';
@@ -42,7 +41,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center space-x-4">
             <Link
-              to="/"
+              to="/admin-home"
               className="flex items-center space-x-1 focus:outline-none text-primary hover:opacity-70"
             >
               <img src="/images/app-logo.svg" className="h-7" alt="App Logo" />

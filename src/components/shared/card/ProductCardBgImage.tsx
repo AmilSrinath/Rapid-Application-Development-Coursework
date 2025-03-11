@@ -2,7 +2,7 @@ import { priceWithSign } from '@/utils/helper';
 import { useModal } from '@/hooks/useModal';
 import { ProductCardProps } from './type';
 
-export default function ProductCardBgImage({ coffee }: ProductCardProps) {
+export default function ProductCardBgImage({coffee, key}: ProductCardProps) {
   // Modal Provider
   const { showProductModal } = useModal();
 

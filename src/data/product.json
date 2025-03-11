@@ -88,7 +88,7 @@
     "image": "/images/coffee/iced-americano.jpeg"
   },
   {
-    "id": "iced-cappuccino",
+    "_id": "iced-cappuccino",
     "displayName": "Iced Cappuccino",
     "type": "iced",
     "price": 3500,

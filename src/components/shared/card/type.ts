@@ -1,5 +1,6 @@
-import { CoffeeProduct } from '@/types';
+import {CoffeeProduct} from '@/types';
 
 export interface ProductCardProps {
-  coffee: CoffeeProduct;
+		coffee: CoffeeProduct,
+		key?: unknown
 }

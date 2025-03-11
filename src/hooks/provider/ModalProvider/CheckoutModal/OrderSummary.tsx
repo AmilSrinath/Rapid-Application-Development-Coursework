@@ -14,7 +14,7 @@ export default function OrderSummary() {
         <tbody className='space-y-2'>
           {items?.map((item) => (
             <tr
-              key={item.product.id}
+              key={item.product._id}
               className="flex items-center justify-between text-sm font-normal text-neutral-800"
             >
               <td className="text-left w-[2rem]">{`${item.quantity}x `}</td>

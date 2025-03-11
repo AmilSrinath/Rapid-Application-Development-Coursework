@@ -55,7 +55,7 @@ export default function CheckoutModal({ show, onClose }: CheckoutModalProps) {
     };
     const orderItems: OrderItem[] = cartItems?.map((ci) => {
       return {
-        productId: ci.product.id,
+        productId: ci.product._id,
         productName: ci.product.displayName,
         quantity: ci.quantity,
         price: ci.product.price * ci.quantity,

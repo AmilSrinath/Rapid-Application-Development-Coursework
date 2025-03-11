@@ -11,7 +11,7 @@ export const defaultCoordinate: LatLng = {
   lat: 16.785692464382592,
 };
 
-export const defaultDeliFee = 2000;
+export const defaultDeliFee = 350;
 
 export const coffeeSizeOptions = [
   {
@@ -47,12 +47,12 @@ export const paymentMethodOptions = [
   },
   {
     value: PaymentMethod.KBZ_PAY,
-    label: "KBZ Pay",
-    icon: '/images/kbz-pay-icon.png',
+    label: "Card Pay",
+    icon: '/images/card-payment_8539301.png',
   },
-  {
-    value: PaymentMethod.WAVE_MONEY,
-    label: "Wave Money",
-    icon: '/images/wave-money-icon.png',
-  },
+  // {
+  //   value: PaymentMethod.WAVE_MONEY,
+  //   label: "Wave Money",
+  //   icon: '/images/wave-money-icon.png',
+  // },
 ];

@@ -7,7 +7,7 @@ import { ProductCardProps } from './type';
 export default function ProductCardHorizontal({ coffee }: ProductCardProps) {
   // Shopping Cart
   const { items } = useShoppingCart();
-  const isSameItem = items?.filter((i) => i.product.id === coffee.id)[0];
+  const isSameItem = items?.filter((i) => i.product._id === coffee._id)[0];
   // Modal Provider
   const { showProductModal } = useModal();
 

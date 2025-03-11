@@ -17,9 +17,9 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ cartItem }) => {
 
   const handleQuantityChange = (value: number) => {
     if (value >= 1) {
-      updateQuantity(product.id, value);
+      updateQuantity(product._id, value);
     } else {
-      removeFromCart(product.id);
+      removeFromCart(product._id);
     }
   };
 

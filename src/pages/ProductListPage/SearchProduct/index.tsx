@@ -1,11 +1,11 @@
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+// import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { useProduct } from '@/hooks/useProduct';
 import { CoffeeProduct } from '@/types';
-import ProductCardSmall from '@/components/shared/card/ProductCardSmall';
+// import ProductCardSmall from '@/components/shared/card/ProductCardSmall';
 import CategoryTitle from '../CategoryTitle';
 import { useEffect, useState } from 'react';
 import useDebounce from '@/hooks/useDebounce';
-import { XMarkIcon } from '@heroicons/react/24/outline';
+// import { XMarkIcon } from '@heroicons/react/24/outline';
 import NoSearchResult from './NoSearchResult';
 import SearchResults from './SearchResults';
 import SearchInput from './SearchInput';

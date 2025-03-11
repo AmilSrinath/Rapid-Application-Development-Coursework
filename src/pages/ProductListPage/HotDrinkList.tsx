@@ -1,9 +1,24 @@
-import { useProduct } from '@/hooks/useProduct';
+// import { useProduct } from '@/hooks/useProduct';
 import ProductsByCategory from './ProductsByCategory';
+import {useEffect, useState} from "react";
 
 export default function HotDrinkList() {
   // Product Provider
-  const { hotCoffees } = useProduct();
+  const [products, setProducts] = useState([]);
 
-  return <ProductsByCategory title="Hot Drink" coffees={hotCoffees} />;
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/api/product/products/hot');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  return <ProductsByCategory title="Hot Drink" coffees={products} />;
 }

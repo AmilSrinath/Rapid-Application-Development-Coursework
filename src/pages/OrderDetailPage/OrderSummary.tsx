@@ -12,7 +12,7 @@ export default function OrderSummary({ orderItems }: OrderSummaryProps) {
     orderItems?.map((item) => item.price * item.quantity)
   );
   // const deliFee = deliOption === DeliOption.DELIVER ? defaultDeliFee : 0;
-  const deliFee = 0;
+  const deliFee = 350;
   const totalPayment = subTotal + deliFee;
 
   return (

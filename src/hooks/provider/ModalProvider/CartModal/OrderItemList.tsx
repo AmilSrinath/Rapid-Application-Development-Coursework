@@ -14,7 +14,7 @@ export default function OrderItemList() {
       <ul>
         {cartItems?.map((cartItem, index) => (
           <li
-            key={cartItem.product.id}
+            key={cartItem.product._id}
             className={classNames(
               'py-3',
               index !== itemCount - 1 ? 'border-b border-primary-200' : ''

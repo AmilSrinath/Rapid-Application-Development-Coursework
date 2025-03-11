@@ -15,7 +15,7 @@ const ShoppingCartProvider: React.FC<ShoppingCartProviderProps> = ({
   const [deliOption, setDeliOption] = useState(DeliOption.DELIVER);
   const [paymentMethod, setPaymentMethod] = useState(PaymentMethod.CASH);
 
-  const cartItemIds = items?.map((ci) => ci.product.id);
+  const cartItemIds = items?.map((ci) => ci.product._id);
   const itemCount = items.length;
   const subTotal = getSumFromArr(
     items?.map((item) => item.product.price * item.quantity)
@@ -24,21 +24,21 @@ const ShoppingCartProvider: React.FC<ShoppingCartProviderProps> = ({
   const totalPayment = subTotal + deliFee;
 
   const addToCart = (product: CoffeeProduct, quantity: number) => {
-    if (!cartItemIds.includes(product.id)) {
+    if (!cartItemIds.includes(product._id)) {
       const newItem: CartItem = {
         product,
         quantity,
       };
       setItems((prevCart) => [...prevCart, newItem]);
     } else {
-      updateQuantity(product.id, quantity);
+      updateQuantity(product._id, quantity);
     }
   };
 
   const updateQuantity = (productId: string, newQuantity: number) => {
     setItems((prevCart) =>
       prevCart.map((item) => {
-        if (item.product.id === productId) {
+        if (item.product._id === productId) {
           const newItem: CartItem = {
             ...item,
             quantity: newQuantity,
@@ -53,7 +53,7 @@ const ShoppingCartProvider: React.FC<ShoppingCartProviderProps> = ({
 
   const removeFromCart = (productId: string) => {
     setItems((prevCart) =>
-      prevCart.filter((item) => item.product.id !== productId)
+      prevCart.filter((item) => item.product._id !== productId)
     );
   };
 

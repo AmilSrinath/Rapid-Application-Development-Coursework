@@ -5,7 +5,7 @@ export function classNames(...classes: (string | undefined)[]) {
 function formatPrice(price: number): string {
   return price.toLocaleString('en-US', {
     style: 'currency',
-    currency: 'MMK',
+    currency: 'LKR',
     // minimumFractionDigits: 2,
   });
 }

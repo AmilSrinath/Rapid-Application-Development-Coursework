@@ -15,7 +15,7 @@ export default function ProductsByCategory({
       <CategoryTitle>{title}</CategoryTitle>
       <div className="grid grid-cols sm:grid-cols-2 gap-4">
         {coffees?.map((coffee) => (
-          <ProductCardHorizontal key={coffee.id} coffee={coffee} />
+          <ProductCardHorizontal key={coffee._id} coffee={coffee} />
         ))}
       </div>
     </div>
