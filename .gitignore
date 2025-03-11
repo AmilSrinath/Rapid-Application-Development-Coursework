@@ -25,3 +25,6 @@ dist-ssr
 
 # Env
 .env
+
+# Ignore JSON files containing secrets
+util/*.json
