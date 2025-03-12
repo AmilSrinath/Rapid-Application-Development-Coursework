@@ -26,5 +26,6 @@ dist-ssr
 # Env
 .env
 
+
 # Ignore JSON files containing secrets
 util/petal-pink-a21a8129bce9.json
